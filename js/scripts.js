@@ -41,4 +41,18 @@ $(function () {
     $('.state_id').text(state_idInput);
     $('.zip_id').text(zip_idInput);
   });
+
+// appointment
+
+  $('form#appointment-form').submit(function(event){
+    debugger;
+    var fullname = $("#full_name_id").val();
+    var startdt = $(".dp1").val();
+    var stopdt = $(".dp2").val();
+    $('.person').text(fullname);
+    $('.startdate').text(startdt);
+    $('.enddate').text(stopdt);
+    event.preventDefault();
+  });
+
 });
