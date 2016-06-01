@@ -21,7 +21,7 @@ $(function () {
 
   $('#emptyletter form').submit(function(event){
     var personInput = $("input#person").val();
-    $('.person').text(personInput);
+    $('.person').text(personInput.toUpperCase());
     event.preventDefault();
   })
 
