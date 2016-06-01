@@ -23,6 +23,22 @@ $(function () {
     var personInput = $("input#person").val();
     $('.person').text(personInput.toUpperCase());
     event.preventDefault();
-  })
+  });
 
+  $('form#order-form').submit(function(event) {
+    event.preventDefault();
+    var full_name_idInput = $("input#full_name_id").val();
+    var street1_idInput = $("input#street1_id").val();
+    var street2_idInput = $("input#street2_id").val();
+    var city_idInput = $("input#city_id").val();
+    var state_idInput = $("select#state_id option:selected").text();
+    var zip_idInput = $("input#zip_id").val();
+
+    $('.full_name_id').text(full_name_idInput);
+    $('.street1_id').text(street1_idInput);
+    $('.street2_id').text(street2_idInput);
+    $('.city_id').text(city_idInput);
+    $('.state_id').text(state_idInput);
+    $('.zip_id').text(zip_idInput);
+  });
 });
