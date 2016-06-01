@@ -13,16 +13,9 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="css/starter-template.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
     <script type="text/javascript" src="js/jquery-2.2.4.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -61,7 +54,40 @@
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
       </div>
+      <div id="blanks">
+        <form>
+          <div class="form-group">
+            <label for="person1">Name</label>
+            <input type="text" class="form-control" id="person1" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <label for="person2">Another name</label>
+            <input type="text" class="form-control" id="person2" placeholder="Another name">
+          </div>
+          <div class="form-group">
+            <label for="animal">An animal</label>
+            <input id="animal" class="form-control" type="text" placeholder="An animal">
+          </div>
+          <div class="form-group">
+            <label for="exclamation">An exclamation</label>
+            <input id="exclamation" class="form-control" type="text" placeholder="An exclamation">
+          </div>
+          <div class="form-group">
+            <label for="verb">A past tense verb</label>
+            <input id="verb" class="form-control" type="text" placeholder="A past tense verb">
+          </div>
+          <div class="form-group">
+            <label for="noun">A noun</label>
+            <input id="noun" class="form-control" type="text" placeholder="A noun">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
 
+      </div>
+      <div id="story">
+        <h1>A fantastical adventure</h1>
+        <p>One day, <span class="person1"></span> and <span class="person2"></span> were walking through the woods, when suddenly a giant <span class="animal"></span> appeared. "<span class="exclamation"></span>", <span class="person1"></span> cried. The two of them <span class="verb"></span> as quickly possible, and when they were safe, <span class="person1"></span> and <span class="person2"></span> gave each other a giant <span class="noun"></span>.</p>
+      </div>
     </div><!-- /.container -->
 
 
@@ -69,9 +95,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
