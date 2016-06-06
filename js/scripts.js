@@ -1,58 +1,44 @@
 $(function () {
   $('#blanks form').submit(function(event) {
-    var person1Input = $("input#person1").val();
-    var person2Input = $("input#person2").val();
-    var animalInput = $("input#animal").val();
-    var exclamationInput = $("input#exclamation").val();
-    var verbInput = $("input#verb").val();
-    var nounInput = $("input#noun").val();
-
-    $('.person1').text(person1Input);
-    $('.person2').text(person2Input);
-    $('.animal').text(animalInput);
-    $('.exclamation').text(exclamationInput);
-    $('.verb').text(verbInput);
-    $('.noun').text(nounInput);
+    event.preventDefault();
+    var blanks = ["person1", "person2", "animal", "exclamation", "verb", "noun"];
+    blanks.forEach(function(blank){
+      var userInput = $("input#" + blank).val();
+      $('.' + blank).text(userInput);
+    });
 
     $('#story').show();
 
-    event.preventDefault();
   });
-
-  $('#emptyletter form').submit(function(event){
-    var personInput = $("input#person").val();
-    $('.person').text(personInput.toUpperCase());
-    event.preventDefault();
-  });
+  //
+  // $('#emptyletter form').submit(function(event){
+  //   var personInput = $("input#person").val();
+  //   $('.person').text(personInput.toUpperCase());
+  //   event.preventDefault();
+  // });
 
   $('form#order-form').submit(function(event) {
     event.preventDefault();
-    var full_name_idInput = $("input#full_name_id").val();
-    var street1_idInput = $("input#street1_id").val();
-    var street2_idInput = $("input#street2_id").val();
-    var city_idInput = $("input#city_id").val();
-    var state_idInput = $("select#state_id option:selected").text();
-    var zip_idInput = $("input#zip_id").val();
+    var letterBlanks = ["full_name_id", "street1_id", "street2_id", "city_id", "state_id", "zip_id"]
+    letterBlanks.forEach(function(blank) {
+      var userInput = $("input#" + blank).val();
+      $('.' + blank).text(userInput);
+    });
 
-    $('.full_name_id').text(full_name_idInput);
-    $('.street1_id').text(street1_idInput);
-    $('.street2_id').text(street2_idInput);
-    $('.city_id').text(city_idInput);
-    $('.state_id').text(state_idInput);
-    $('.zip_id').text(zip_idInput);
   });
-
-// appointment
-
-  $('form#appointment-form').submit(function(event){
-    debugger;
-    var fullname = $("#full_name_id").val();
-    var startdt = $(".dp1").val();
-    var stopdt = $(".dp2").val();
-    $('.person').text(fullname);
-    $('.startdate').text(startdt);
-    $('.enddate').text(stopdt);
-    event.preventDefault();
-  });
-
 });
+//
+// // appointment
+//
+//   $('form#appointment-form').submit(function(event){
+//     debugger;
+//     var fullname = $("#full_name_id").val();
+//     var startdt = $(".dp1").val();
+//     var stopdt = $(".dp2").val();
+//     $('.person').text(fullname);
+//     $('.startdate').text(startdt);
+//     $('.enddate').text(stopdt);
+//     event.preventDefault();
+//   });
+//
+// });
